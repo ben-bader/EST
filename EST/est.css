@@ -1,0 +1,288 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  body {
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Header */
+  .header {
+    background-color: #0073e6;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+  }
+  
+  .logo {
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  .menu-icon {
+    display: none;
+    font-size: 2em;
+    color: white;
+    cursor: pointer;
+    position: relative;
+   left: 350%;
+   margin-top: -50%;
+  }
+  
+  /* Desktop Nav Links */
+  .nav-links {
+    display: flex;
+    list-style: none;
+    position: relative;
+    
+    left: 40%;
+    margin-top: -5.5%;
+  }
+  
+  .nav-links li {
+    margin: 0 15px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: #ffdd57;
+  }
+  
+  /* Sidebar Menu Styles */
+  .sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #111111dd;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    z-index: 2;
+   
+  }
+  
+  .sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+    
+  }
+ 
+  .sidebar a:hover {
+    background-color: #575757;
+  }
+  
+  .sidebar .close-btn {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    font-size: 36px;
+  }
+  
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none; /* Hide desktop nav-links on mobile */
+    }
+  
+    .menu-icon {
+      display: block; /* Show menu icon on mobile */
+    }
+  }
+  
+  /* Hero Section */
+  .hero {
+    background: linear-gradient(45deg, #0073e6, #ffdd57);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .cta-button {
+  /*   background-color: #ffdd57; */
+    color: #00458a;
+    padding: 10px 20px;
+    border: solid  #fff200 ;
+    border-radius: 25px;
+    font-size: 1.2em;
+    text-decoration: none;
+    cursor: pointer;
+    transition:  0.3s all ease-in-out;
+  }
+  
+  .cta-button:hover  {
+    background: linear-gradient(90deg,rgb(75, 75, 255),rgb(0, 183, 255),rgb(255, 255, 142)) ;
+    color: #fff;
+    padding: 0.7rem 1.5rem ;
+    box-shadow: 2px 8px 20px rgb(79, 193, 255);
+  border: none;
+  }
+  
+  .hero p{
+margin-bottom: 2rem;
+  }
+  /* About Section */
+  .about {
+    padding: 50px;
+    background-color: #f4f4f4;
+    text-align: center;
+  }
+  
+  .about h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  
+  .about p {
+    font-size: 1.2em;
+    max-width: 700px;
+    margin: auto;
+  }
+  
+  /* Departments Section */
+  .departments {
+    padding: 50px;
+    background-color: #fff;
+    text-align: center;
+  }
+  
+  .departments h2 {
+    font-size: 2.5em;
+    margin-bottom: 50px;
+  }
+  
+  .department-cards {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .department-card {
+    width: 30%;
+    background-color: #0073e6;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .department-card:hover {
+    transform: scale(1.05);
+  }
+  
+  @media (max-width: 768px) {
+    .department-cards {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .department-card {
+      width: 80%;
+      margin-bottom: 20px;
+    }
+  }
+  
+  /* News Section */
+  .news {
+    padding: 50px;
+    background-color: #f4f4f4;
+    text-align: center;
+  }
+  
+  .news h2 {
+    font-size: 2.5em;
+    margin-bottom: 50px;
+  }
+  
+  .news-container {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .news-item {
+    width: 30%;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .news-item:hover {
+    transform: scale(1.05);
+  }
+  
+  @media (max-width: 768px) {
+    .news-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .news-item {
+      width: 80%;
+      margin-bottom: 20px;
+    }
+  }
+  
+  /* E-Learning Section */
+  .e-learning {
+    padding: 50px;
+    background-color: #fff;
+    text-align: center;
+  }
+  
+  .e-learning h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  
+  .e-learning p {
+    font-size: 1.2em;
+    max-width: 700px;
+    margin: auto;
+    margin-bottom: 2rem;
+  }
+  
+  .e-learning .cta-button {
+    margin-top: 20px;
+    transition: 0.3s all ease-in-out;
+  }
+  
+  /* Footer */
+  .footer {
+    padding: 20px;
+    background-color: #0073e6;
+    color: #fff;
+    text-align: center;
+  }
+  
